@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BooksController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -26,5 +27,6 @@ Route::middleware('auth')->group(function () {
 });
 
 route::resource('/admin', adminController::class);
+route::resource('/books', BooksController::class);
 
 require __DIR__.'/auth.php';
